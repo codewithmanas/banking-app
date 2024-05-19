@@ -5,7 +5,7 @@ import React from 'react';
 
 const Home = () => {
 
-    const loggedIn = { firstName: "Manas"};
+    const loggedIn = { firstName: "Manas", lastName: "Ranjan", email: "manas@gmail.com"};
 
   return (
     <section className='home'>
@@ -27,7 +27,11 @@ const Home = () => {
           RECENT TRANSACTIONS
         </div>
 
-        <RightSideBar />
+        <RightSideBar
+          user={loggedIn}
+          transactions={[]}
+          banks={[{ currentBalance: 123.50 },{ currentBalance: 500.50 }]}
+        />
     </section>
   )
 }
